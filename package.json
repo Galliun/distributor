@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ethos-connect-vue": "^0.0.52",
     "vue": "^3.4.21",
     "vue-router": "^4.4.0",
     "vuex": "^4.0.2"
