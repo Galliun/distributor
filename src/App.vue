@@ -1,4 +1,5 @@
 <template>
+    <EthosConnectProvider>
   <div>
     <main>
       <div>
@@ -6,6 +7,7 @@
       </div>
     </main>
   </div>
+  </EthosConnectProvider>
 </template>
 
 <script>
