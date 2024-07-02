@@ -4,8 +4,8 @@ import store from './store';
 import './style.css';
 import App from './App.vue';
 import {
-    EthosConnectPlugin,
-    EthosConfiguration,
+  EthosConfiguration,
+  EthosConnectPlugin
 } from "ethos-connect-vue";
 
 // const config: EthosConfiguration = {

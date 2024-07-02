@@ -1,14 +1,11 @@
 <template>
-    <EthosConnectProvider>
-  <div>
-    <main>
-      <div>
-        <router-view />
-      </div>
-    </main>
-  </div>
+  <EthosConnectProvider>
+    <div>
+      <main>
+        <div>
+          <router-view />
+        </div>
+      </main>
+    </div>
   </EthosConnectProvider>
 </template>
-
-<script>
-</script>
