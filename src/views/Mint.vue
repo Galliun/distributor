@@ -3,11 +3,11 @@ import { ethosForVue, TransactionBlock } from 'ethos-connect-vue';
 
 const { context :{wallet, modal} } = ethosForVue() || {};
 
-const packageId = "0xa401bdf6783c4409ce79f731576a2a3a6d9276e6005c8f73555e54ea56014c01";
-const waterCoolerId = "0x5cad685144ec87a966f2cc888a873ee7a75e41a71f97629a7abedf2bde2b08e9";
-const mintwarehouseId = "0xf37e73983f5aee4abbbfa07275fc149f116949f7b77e9d7b2405f31c6746d5e4";
-const mintsettingsId = "0x0d465c1220e90a4f4d409b186ade2e89e03c8a14bf5fadeb579990c8ffbd43f5";
-const mintPrice = 1000000;
+const packageId = "";
+const waterCoolerId = "";
+const mintwarehouseId = "";
+const mintsettingsId = "";
+const mintPrice = 0;
 
 const connect = () => {
   if (!wallet) return;
