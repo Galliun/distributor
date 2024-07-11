@@ -4,9 +4,10 @@ import { ethosForVue, TransactionBlock } from 'ethos-connect-vue';
 const { context :{wallet, modal} } = ethosForVue() || {};
 
 const packageId = "0xa401bdf6783c4409ce79f731576a2a3a6d9276e6005c8f73555e54ea56014c01";
-const waterCoolerId = "0x7fc58e38a0c333d8517d61ebc41393ee27bd6b8b30a93a423e1baf49efd53731";
-const mintwarehouseId = "0x1b0c880187926783db3e865a3232386c6155e9688231bf5bfbe26d85f237d958";
-const mintsettingsId = "0xe1d107d8f7678d4a70a8a404739e5243809c7cc55c1501cd6e8a06fe193b46be";
+const waterCoolerId = "0x5cad685144ec87a966f2cc888a873ee7a75e41a71f97629a7abedf2bde2b08e9";
+const mintwarehouseId = "0xf37e73983f5aee4abbbfa07275fc149f116949f7b77e9d7b2405f31c6746d5e4";
+const mintsettingsId = "0x0d465c1220e90a4f4d409b186ade2e89e03c8a14bf5fadeb579990c8ffbd43f5";
+const mintPrice = 1000000;
 
 const connect = () => {
   if (!wallet) return;
@@ -20,7 +21,7 @@ const mint = async () => {
 
     const txb = new TransactionBlock();
 
-    const [coin] = txb.splitCoins(txb.gas, [txb.pure(1000000)]);
+    const [coin] = txb.splitCoins(txb.gas, [txb.pure(mintPrice)]);
 
     console.log("Admin calls public_mint_test");
 
