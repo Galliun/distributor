@@ -5,8 +5,9 @@ const { context :{wallet, modal} } = ethosForVue() || {};
 
 const packageId = "";
 const waterCoolerId = "";
-const mintwarehouseId = "";
-const mintsettingsId = "";
+const trasferPolicyId = "";
+const warehouseId = "";
+const settingsId = "";
 const mintPrice = 0;
 
 const connect = () => {
@@ -23,14 +24,16 @@ const mint = async () => {
 
     const [coin] = txb.splitCoins(txb.gas, [txb.pure(mintPrice)]);
 
-    console.log("Admin calls public_mint_test");
+    console.log("Admin calls public_mint");
 
     txb.moveCall({
-        target: `${packageId}::mint::public_mint_test`,
+        // target: `${packageId}::mint::public_mint`,
+        target: `${packageId}::orchestrator::public_mint`,
         arguments: [
             txb.object(waterCoolerId),
-            txb.object(mintwarehouseId),
-            txb.object(mintsettingsId),
+            txb.object(warehouseId),
+            txb.object(settingsId),
+            txb.object(trasferPolicyId),
             coin
         ],
     });
