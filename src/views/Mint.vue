@@ -6,6 +6,7 @@ const { context :{wallet, modal} } = ethosForVue() || {};
 const packageId = "";
 const waterCoolerId = "";
 const trasferPolicyId = "";
+const factorySettingsId = "";
 const warehouseId = "";
 const settingsId = "";
 const mintPrice = 0;
@@ -27,10 +28,10 @@ const mint = async () => {
     console.log("Admin calls public_mint");
 
     txb.moveCall({
-        // target: `${packageId}::mint::public_mint`,
         target: `${packageId}::orchestrator::public_mint`,
         arguments: [
             txb.object(waterCoolerId),
+            txb.object(factorySettingsId),
             txb.object(warehouseId),
             txb.object(settingsId),
             txb.object(trasferPolicyId),
