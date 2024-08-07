@@ -11,6 +11,7 @@
   "dependencies": {
     "@mysten/sui": "^1.2.1",
     "ethos-connect-vue": "^0.0.52",
+    "sweetalert2": "^11.12.4",
     "vue": "^3.4.21",
     "vue-router": "^4.4.0",
     "vuex": "^4.0.2"
